@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Accueil</title>
+  </head>
+  <body>
+    <script type="module">
+      import createHeader from "./components/Header.js";
+      const header = createHeader();
+      document.body.appendChild(header);
+    </script>
+    <main>
+      <div>
+        <h2>Bienvenue !</h2>
+        <p>
+          Ce mini site a été créé avec Node.js pour apprendre les bases du
+          développement web côté serveur.
+        </p>
+      </div>
+      <div>
+        <p>Vous y trouverez quelques exemples simples de fonctionnalités :</p>
+        <ul>
+          <li>Une page À propos pour en savoir plus sur le projet.</li>
+          <li>Une page Contact pour nous joindre.</li>
+        </ul>
+      </div>
+      <p>
+        Ce site est un point de départ pour expérimenter avec Node.js, Express,
+        et d'autres technologies du web.
+      </p>
+      <p>Bonne visite !</p>
+    </main>
+  </body>
+</html>
