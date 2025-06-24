@@ -12,7 +12,7 @@ const path = require("path");
 const server = http.createServer((req, res) => {
   console.log("le serveur");
   // on va initier le chemin du fichier a servir selon la route demandée
-  let filePath = "./views"; // c'est le dossier qui va contenir nos vues
+  let filePath = "./public"; // c'est le dossier qui va contenir nos vues
   let status = 200; // on suppose que tout va bien
   let contentType = "text/html"; // on sert uniquement de l'HTML
 
@@ -34,6 +34,8 @@ const server = http.createServer((req, res) => {
       filePath += "/404.html";
       break;
   }
+  console.log("Chemin du fichier à lire:", path.resolve(__dirname, filePath));
+
   fs.readFile(path.resolve(__dirname, filePath), (err, content) => {
     if (err) {
       res.writeHead(500, { "Content-Type": "text/plain" });
