@@ -10,7 +10,7 @@ const fs = require("fs");
 const path = require("path");
 
 const server = http.createServer((req, res) => {
-  console.log("le serveur");
+  console.log("Requête recue");
   // on va initier le chemin du fichier a servir selon la route demandée
   let filePath = "./public"; // c'est le dossier qui va contenir nos vues
   let status = 200; // on suppose que tout va bien
