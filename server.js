@@ -22,11 +22,11 @@ const server = http.createServer((req, res) => {
       filePath += "/index.html"; // si je demande '/' je recois index.html (page accueil)
       break;
 
-    case "about":
+    case "/about":
       filePath += "/about.html";
       break;
 
-    case "contact":
+    case "/contact":
       filePath += "/contact.html";
       break;
 
